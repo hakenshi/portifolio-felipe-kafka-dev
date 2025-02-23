@@ -131,3 +131,12 @@ section{
 main{
   height: 100%;
 }
+
+.grid-container{
+  display: grid;
+}
+
+.project-card-container{
+  width: 400px;
+  height: 300px;
+}
