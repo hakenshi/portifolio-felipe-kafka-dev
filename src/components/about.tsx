@@ -9,13 +9,16 @@ export default function About() {
                 <div className="flex flex-col-reverse md:flex-row items-center justify-around bg-zinc-700/20 p-10 rounded-xl border-zinc-800 border-2 w-11/12 h-9/12">
                     <div className='max-w-xl'>
                         <h2 className='text-4xl text-center font-black my-5'>About Me</h2>
-                        <p>
-                            Hi, my name is Felipe Kafka Dias. 
-                            I'm a full-stack web developer specializing in Next.js and Laravel development.
-                        </p>
-                        <p>
-                            My main focus is on building fast, self-scaling applications that provide an exceptional user experience and intuitive user interfaces.
-                        </p>
+                        <div className="space-y-3">
+                            <p>
+                                I’m Felipe Kafka Dias, a graduate in Information Technology from SENAC MG and currently pursuing a Bachelor's degree in Software Engineering at UNIFAE.
+                            </p>
+                            <p>I’m a dedicated professional with a critical mindset, always seeking to enhance my knowledge and skills in new technologies.</p>
+                            <p>
+                                I have experience in PHP, Laravel, React, and TailwindCSS, developing real systems and applying these technologies in challenging projects.
+                            </p>
+                            <p>I’m committed to delivering my projects efficiently, focusing on quality and continuous learning.</p>
+                        </div>
                     </div>
                     <div className='size-48 md:size-96'>
                         <motion.div

@@ -6,11 +6,19 @@ export default function Header() {
             <nav>
                 <div className='flex justify-between mx-20'>
                     <div>
-                        <p className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer'>lonelyw</p>
+                        <p className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer'>LW</p>
                     </div>
                     <ul className='flex gap-5'>
                         {['Home', 'About me', 'Projects', 'Contact'].map((item, index) => (
-                            <motion.li className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer' key={index}>
+                            <motion.li
+                                onClick={() => {
+                                    const selector = `#${item.toLowerCase().split(' ')[0]}`
+                                    const nextSection = document.querySelector(selector);
+                                    if (nextSection) {
+                                        nextSection.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                                className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer' key={index}>
                                 {item}
                             </motion.li>
                         ))}

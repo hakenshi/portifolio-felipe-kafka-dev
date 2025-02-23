@@ -49,8 +49,8 @@ const projects = [
 export default function Projects() {
 
     return (
-        <Section>
-            <main className="grid place-items-center my-5 pb-10 overflow-y-scroll">
+        <Section id="projects">
+            <main className="grid place-items-center pb-10 overflow-y-scroll">
                 <h2 className="text-center text-3xl font-black">Projects</h2>
                 <motion.div
                     className="overflow-hidden w-full"
@@ -89,7 +89,7 @@ export default function Projects() {
                                     <h3 className="text-2xl font-semibold text-white mb-2">
                                         {project.title}
                                     </h3>
-                                    <p className="text-zinc-300 mb-4">
+                                    <p className="text-zinc-300 mb-4 whitespace-normal">
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-2">

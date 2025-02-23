@@ -41,7 +41,7 @@ export default function Contact() {
     }
 
     return (
-        <Section>
+        <Section id="contact">
             <main className="grid place-items-center">
                 <div className="flex flex-col items-center justify-around gap-5">
                     <div className="grid place-items-center">
