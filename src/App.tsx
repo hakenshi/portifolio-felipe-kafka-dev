@@ -7,7 +7,7 @@ import Projects from "./components/projects"
 function App() {
 
   return (
-    <div className=" relative min-h-screen">
+    <div className="relative">
       <div className="fixed inset-0 z-[-1]">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black" />
         <Blobs />
