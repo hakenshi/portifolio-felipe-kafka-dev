@@ -1,6 +1,5 @@
-import { motion, useAnimation } from "motion/react";
+import { motion } from "motion/react";
 import Section from "./section";
-import { useEffect } from "react";
 
 const projects = [
     {
@@ -49,7 +48,6 @@ const projects = [
 
 export default function Projects() {
 
-    const controls = useAnimation()
     return (
         <Section>
             <main className="grid place-items-center my-5 pb-10 overflow-y-scroll">
