@@ -1,5 +1,6 @@
 import About from "./components/about"
 import { Blobs } from "./components/blobs"
+import Contact from "./components/contact"
 import Header from "./components/header"
 import Hero from "./components/hero"
 import Projects from "./components/projects"
@@ -17,6 +18,7 @@ function App() {
         <Hero />
         <About />
         <Projects />
+        <Contact />
       </div>
     </div>
   )

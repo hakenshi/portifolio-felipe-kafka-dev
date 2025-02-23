@@ -37,6 +37,13 @@ const projects = [
         image: "/placeholder.svg?height=300&width=300",
         tags: ["NextJS", "Typescript", "PrismaORM", "PostgreSQL"],
     },
+    {
+        id: 6,
+        title: "Pokédex WebApp",
+        description: "A simple Pokédex webapp",
+        image: "/placeholder.svg?height=300&width=300",
+        tags: ["NextJS", "Typescript", "PrismaORM", "PostgreSQL"],
+    },
 ];
 
 export default function Projects() {
@@ -47,7 +54,7 @@ export default function Projects() {
                     {projects.map((project, index:number) => (
                         <motion.div
                             key={index}
-                            className="relative overflow-hidden rounded-lg shadow-lg w-120 h-90 border-2 border-zinc-800"
+                            className="relative overflow-hidden rounded-lg shadow-lg w-110 h-80 border-2 border-zinc-800"
                             whileHover={{ 
                                 scale: 1.02,
                                 boxShadow: "0 0 20px var(--color-red-500)",
