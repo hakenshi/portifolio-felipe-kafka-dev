@@ -141,6 +141,6 @@ main{
   height: 300px;
 }
 
-button:hover{
-  box-shadow: 0 0 30px #e63946;
+h1,h2,h3,h4,h5,h6{
+  @apply bg-gradient-to-t from-zinc-500 via-zinc-200 to-white text-transparent bg-clip-text;
 }
