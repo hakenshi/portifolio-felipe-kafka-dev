@@ -1,6 +1,7 @@
 import Section from './section'
 import { Button } from './ui/button'
 import { easeIn, motion } from "motion/react"
+import { Dialog, DialogTrigger, DialogContent, DialogDescription, DialogTitle, DialogHeader } from './ui/dialog'
 
 export default function Hero() {
     return (
@@ -13,15 +14,38 @@ export default function Hero() {
                         </h1>
                         <p className="text-xl tracking-tight bg-radial from-slate-200 to-zinc-400 p-5 text-transparent bg-clip-text">Shall we
                             <span className='bg-linear-to-t from-red-300 via-red-500 to-red-700 text-transparent bg-clip-text font-medium red-shadow'> build </span>
-                            something cool together?</p>
+                            something together?</p>
                     </div>
                     <div className='space-x-10 text-center mt-15'>
                         <Button size='lg' variant='defaultGlass' className='text-lg text-center w-56'>
                             Download My CV
                         </Button>
-                        <Button size='lg' variant={'default'} className='text-lg text-center w-56 border border-red-600 hover:bg-slate-950/50 bg-slate-950/10 drop-shadow-red-500'>
-                            About Me
-                        </Button>
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <Button size='lg' variant={'default'} className='text-lg text-center w-56 border border-red-600 hover:bg-slate-950/50 bg-slate-950/10 drop-shadow-red-500'>
+                                    About Me
+                                </Button>
+                            </DialogTrigger>
+                            <DialogContent className='dark border-red-600/10 shadow-2xl shadow-red-600/20 p-10'>
+                                <DialogHeader>
+                                    <DialogTitle>
+                                        <h2 className='text-4xl text-center font-black mb-5'>About Me</h2>
+                                    </DialogTitle>
+                                </DialogHeader>
+                                <DialogDescription>
+                                    <div className="space-y-3">
+                                        <p>
+                                            I’m Felipe Kafka Dias, a graduate in Information Technology from SENAC MG and currently pursuing a Bachelor's degree in Software Engineering at UNIFAE.
+                                        </p>
+                                        <p>I’m a dedicated professional with a critical mindset, always seeking to enhance my knowledge and skills in new technologies.</p>
+                                        <p>
+                                            I have experience in PHP, Laravel, React, and TailwindCSS, developing real systems and applying these technologies in challenging projects.
+                                        </p>
+                                        <p>I’m committed to delivering my projects efficiently, focusing on quality and continuous learning.</p>
+                                    </div>
+                                </DialogDescription>
+                            </DialogContent>
+                        </Dialog>
                     </div>
                 </div>
                 <div className='flex flex-col items-center'>
