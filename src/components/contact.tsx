@@ -9,40 +9,30 @@ import { useForm } from "react-hook-form"
 
 export default function Contact() {
     const focusTransition = { duration: 0.2 };
-
     const formRef = useRef(null)
-
     const form = useForm<EmailSchema>({
         resolver: zodResolver(emailSchema)
     })
-
     async function sendEmail(formData: EmailSchema) {
         const parsed = emailSchema.safeParse(formData)
-
         if (!parsed.success) {
             return { errors: parsed.error.format() }
         }
         try {
-
             if (formRef.current)
-
                 await emailjs.sendForm("service_zmw2atf", "template_sqm9j4t", formRef.current, {
                     publicKey: "cRcgIsXyCyMTzdq0m",
                 });
-
             form.reset()
-
             return
         }
         catch {
             return { errors: "Failed to send message, please try again." }
         }
-
     }
-
     return (
         <Section id="contact">
-            <main className="grid place-items-center">
+            <div className="grid place-items-center">
                 <div className="flex flex-col items-center justify-around gap-5">
                     <div className="grid place-items-center">
                         <h2 className="text-lg font-black pb-5">Social Media</h2>
@@ -94,7 +84,7 @@ export default function Contact() {
                         </div>
                     </form>
                 </div>
-            </main>
+            </div>
         </Section>
     );
 }

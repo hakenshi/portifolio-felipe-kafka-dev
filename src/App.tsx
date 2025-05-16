@@ -12,13 +12,13 @@ function App() {
         {/* <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/90 to-slate-950" /> */}
         {/* <Blobs /> */}
         <div
-          className="absolute inset-0 bg-linear-to-tl to-slate-950/50 via-red-950/30 from-red-800/40 blur-2xl z-[-1]"
+          className="absolute inset-0 bg-linear-to-t from-red-900/10 via-red-950/10 to-zinc-950 blur-2xl z-[-1]"
         ></div>
       </div>
       <div className='z-10 relative'>
         <Header />
         <Hero />
-        <About />
+        {/* <About /> */}
         <Projects />
         <Contact />
       </div>

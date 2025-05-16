@@ -50,7 +50,6 @@ export default function Projects() {
 
     return (
         <Section id="projects">
-            <main className="grid place-items-center pb-10 overflow-y-scroll">
                 <h2 className="text-center text-3xl font-black">Projects</h2>
                 <motion.div
                     className="overflow-hidden w-full"
@@ -107,7 +106,6 @@ export default function Projects() {
                         ))}
                     </motion.div>
                 </motion.div>
-            </main>
         </Section >
     );
 }
