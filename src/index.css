@@ -140,3 +140,7 @@ main{
   width: 400px;
   height: 300px;
 }
+
+button:hover{
+  box-shadow: 0 0 30px #e63946;
+}
