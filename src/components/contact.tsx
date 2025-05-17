@@ -41,7 +41,7 @@ export default function Contact() {
                             <a target="_blank" href="https://www.linkedin.com/in/felipe-kafka-dias-39390b252"><img className="size-15" src="/linkedin.png" alt="" /></a>
                         </div>
                     </div>
-                    <form ref={formRef} onSubmit={form.handleSubmit(sendEmail)} className="bg-zinc-700/20  md:max-w-2xl md:w-1000 min-h-120 p-10 rounded-xl border-zinc-800 border-2 space-y-4">
+                    <form ref={formRef} onSubmit={form.handleSubmit(sendEmail)} className="bg-zinc-950/60  md:max-w-2xl md:w-1000 min-h-120 p-10 rounded-xl border-zinc-900 border-2 space-y-4">
                         <h2 className="text-2xl font-black text-center">Get in Touch</h2>
                         <div className="w-full">
                             <label className="block pb-6">Name</label>

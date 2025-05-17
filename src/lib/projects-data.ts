@@ -19,6 +19,7 @@ export const projects = [
             "Modern UI/UX",
             "Real-time interactions",
         ],
+        sourceCode: "https://github.com/hakenshi/droplet",
     },
     {
         id: 2,
@@ -40,6 +41,7 @@ export const projects = [
             "Live score updates",
             "Announcements and notifications",
         ],
+        sourceCode: "https://github.com/hakenshi/intercurso-fae-frontend",
     },
     {
         id: 3,
@@ -61,6 +63,7 @@ export const projects = [
             "Customizable templates",
             "Fast CLI experience",
         ],
+        sourceCode: "https://github.com/hakenshi/stich",
     },
     {
         id: 4,
@@ -82,6 +85,7 @@ export const projects = [
             "Customer management",
             "Sales analytics dashboard",
         ],
+        sourceCode: "https://github.com/hakenshi/sistema-de-vendas",
     },
     {
         id: 5,
@@ -103,6 +107,7 @@ export const projects = [
             "Teacher-student communication",
             "Interactive learning modules",
         ],
+        sourceCode: "https://github.com/hakenshi/project-vip-uce",
     },
     {
         id: 6,
@@ -123,6 +128,7 @@ export const projects = [
             "Responsive design",
             "Fast loading",
         ],
+        sourceCode: "https://github.com/hakenshi/pokedex-webapp",
     },
 ];
 
