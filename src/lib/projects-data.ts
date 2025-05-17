@@ -3,7 +3,7 @@ export const projects = [
         id: 1,
         title: "Droplet",
         description:
-            "Droplet is a ambicious social media app project that's still on development, it embraces the freedeom of speech and the possibility to connect with people and make new experiences.",
+            "Droplet is an ambitious social media app project currently under development. The platform is designed to champion freedom of speech, allowing users to express themselves openly and authentically. Droplet aims to foster meaningful connections by enabling users to discover, interact, and share experiences with people from diverse backgrounds. The app features a modern, intuitive UI/UX, real-time messaging and notifications, and robust privacy controls, all built with scalability and user empowerment in mind.",
         briefDescription:
             "A social media app focused on freedom of speech and connecting people.",
         image: "/placeholder.svg?height=300&width=300",
@@ -13,12 +13,18 @@ export const projects = [
             end: null, // still in development
             status: "In Development",
         },
+        keyFeatures: [
+            "Freedom of speech focused",
+            "Connect with new people",
+            "Modern UI/UX",
+            "Real-time interactions",
+        ],
     },
     {
         id: 2,
         title: "Intercurso UNIFAE",
         description:
-            "This platform was created for my college in 2024. It was made to help organize the annual intercollegiate sports event (similar to a 'school games week'), where students from different courses compete and interact.",
+            "Intercurso UNIFAE is a comprehensive platform developed for my college in 2024 to streamline the organization of the annual intercollegiate sports event. The system allows administrators to schedule events, manage teams and participants, and facilitate communication between students from different courses. It features live score updates, real-time announcements, and a user-friendly interface for both organizers and participants, making the event more engaging and efficient.",
         briefDescription:
             "A platform to organize and manage annual intercollegiate sports events.",
         image: "/placeholder.svg?height=300&width=300",
@@ -28,12 +34,18 @@ export const projects = [
             end: "October 2024",
             status: "Completed",
         },
+        keyFeatures: [
+            "Event scheduling and management",
+            "Team and participant registration",
+            "Live score updates",
+            "Announcements and notifications",
+        ],
     },
     {
         id: 3,
         title: "Stich",
         description:
-            "Stich is a free and opensource powerful CLI tool made for help people kickstart react and Next.JS projects, make components and Next.JS related files (pages, layouts, actions, api routes, etc...)",
+            "Stich is a free and open-source CLI tool designed to accelerate the development of React and Next.JS projects. It enables developers to quickly scaffold new projects, generate components, and create Next.JS-specific files such as pages, layouts, actions, and API routes. Stich offers customizable templates, a fast and intuitive command-line experience, and is built with Typescript and Bun for optimal performance and extensibility.",
         briefDescription:
             "A CLI tool to quickly scaffold React and Next.JS projects and files.",
         image: "/placeholder.svg?height=300&width=300",
@@ -43,12 +55,18 @@ export const projects = [
             end: null, // still in development
             status: "In Development",
         },
+        keyFeatures: [
+            "Scaffold React/Next.JS projects",
+            "Generate components and files",
+            "Customizable templates",
+            "Fast CLI experience",
+        ],
     },
     {
         id: 4,
         title: "Ecommerce Management System",
         description:
-            "A comprehensive platform for managing ecommerce operations, inventory, and customer relations with ease.",
+            "The Ecommerce Management System is a robust platform designed to simplify and centralize ecommerce operations. It provides tools for managing inventory, processing orders, and maintaining customer relationships. The system includes a sales analytics dashboard for tracking performance, automated notifications for order updates, and user-friendly interfaces for both administrators and staff. Built with scalability and security in mind, it streamlines day-to-day business processes for online retailers.",
         briefDescription:
             "A platform to manage ecommerce operations, inventory, and customers.",
         image: "/placeholder.svg?height=300&width=300",
@@ -58,12 +76,18 @@ export const projects = [
             end: "April 2024",
             status: "Completed",
         },
+        keyFeatures: [
+            "Inventory management",
+            "Order processing",
+            "Customer management",
+            "Sales analytics dashboard",
+        ],
     },
     {
         id: 5,
         title: "VIP English School Platform",
         description:
-            "A streamlined learning management system offering interactive features for both teachers and students, facilitating assignments, progress tracking, and communication.",
+            "VIP English School Platform is a modern learning management system tailored for language schools. It offers interactive features for teachers and students, including assignment creation and submission, progress tracking, and direct communication channels. The platform supports interactive learning modules, automated grading, and detailed analytics to monitor student performance. Its intuitive interface ensures a seamless experience for both educators and learners, enhancing the overall educational process.",
         briefDescription:
             "A learning management system for teachers and students.",
         image: "/placeholder.svg?height=300&width=300",
@@ -73,11 +97,18 @@ export const projects = [
             end: "November 2024",
             status: "Completed",
         },
+        keyFeatures: [
+            "Assignment management",
+            "Progress tracking",
+            "Teacher-student communication",
+            "Interactive learning modules",
+        ],
     },
     {
         id: 6,
         title: "Pokédex WebApp",
-        description: "A simple Pokédex webapp",
+        description:
+            "Pokédex WebApp is a lightweight and responsive web application that allows users to browse, search, and filter Pokémon data. The app provides detailed information on each Pokémon, including stats, types, and evolutions. It features a fast-loading interface, optimized for both desktop and mobile devices, and leverages modern web technologies to deliver a smooth and engaging user experience for Pokémon enthusiasts.",
         briefDescription: "A web app to browse and search Pokémon data.",
         image: "/placeholder.svg?height=300&width=300",
         tags: ["Next.JS", "Typescript", "PrismaORM"],
@@ -86,6 +117,12 @@ export const projects = [
             end: "October 2024",
             status: "Completed",
         },
+        keyFeatures: [
+            "Pokémon search and filter",
+            "Detailed Pokémon info",
+            "Responsive design",
+            "Fast loading",
+        ],
     },
 ];
 

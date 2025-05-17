@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, Code2Icon, GithubIcon } from "lucide-react";
+import { ChevronLeftIcon, ChevronRight, Code2Icon, GithubIcon } from "lucide-react";
 import { Link, useParams } from "react-router";
 import { Button } from "../components/ui/button";
 import Section from "../components/section";
@@ -14,7 +14,7 @@ export default function ProjectsProjectPage() {
 
   return (
     <Section>
-      <div className="h-10/12 w-full p-10 space-y-5 container mx-auto relative">
+      <div className="h-10/12 w-full p-10 space-y-5 container mx-auto">
         <Link to={{
           hash: "#projects",
           pathname: "/projects"
@@ -30,11 +30,15 @@ export default function ProjectsProjectPage() {
           <Code2Icon className="text-red-600/70" size={32} />
         </AspectRatio>
         <div className="grid grid-cols-[1.5fr_0.5fr] gap-5">
-          <div className="space-y-3">
+          <div className="space-y-8">
             <h3 className="text-2xl">Description</h3>
             <p>
               {project?.description}
             </p>
+            <h3 className="text-2xl">Key Features</h3>
+            <ul className="list-disc pl-5">
+              {project?.keyFeatures.map((kf, index) => <li key={index}>{kf}</li>)}
+            </ul>
           </div>
           <Card className="bg-gray-900/50 text-gray-200 border-gray-800/50">
             <CardHeader>
@@ -58,6 +62,20 @@ export default function ProjectsProjectPage() {
               <Button className="w-full"> <GithubIcon /> <span>Source Code</span></Button>
             </CardFooter>
           </Card>
+        </div>
+        <div className="py-10 flex justify-between container">
+          {project?.id !== undefined && project.id > 0 && (
+            <Link to={`/projects/${project.id - 1}`} className="flex items-center gap-2 text-red-700">
+              <ChevronLeftIcon size={20} />
+              Previous Project
+            </Link>
+          )}
+          {project?.id !== undefined && project.id < projects.length - 1 && (
+            <Link to={`/projects/${project.id + 1}`} className="flex items-center gap-2 text-red-700 ml-auto">
+              Next Project
+              <ChevronRight size={20} />
+            </Link>
+          )}
         </div>
       </div>
 
