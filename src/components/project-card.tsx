@@ -1,7 +1,6 @@
 import { Code2Icon } from 'lucide-react'
-import React from 'react'
 import { Button } from './ui/button'
-import { Card, CardHeader, CardContent, CardTitle, CardDescription, CardFooter } from './ui/card'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 
 interface ProjectCardProps {
     title: string,
@@ -23,7 +22,7 @@ export default function ProjectCard({ project }: { project: ProjectCardProps }) 
             </CardContent>
             <CardFooter className="flex flex-col">
                 <div className="flex justify-start w-full gap-2">
-                    {project.tags.map(tag => (
+                    {project.tags.slice(0,3).map(tag => (
                         <div className="bg-gray-600 px-3 py-1 rounded-full text-xs">{tag}</div>
                     ))}
                 </div>

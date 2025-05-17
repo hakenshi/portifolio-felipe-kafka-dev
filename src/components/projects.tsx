@@ -2,51 +2,7 @@ import { Link } from "react-router";
 import ProjectCard from "./project-card";
 import Section from "./section";
 import { buttonVariants } from "./ui/button";
-
-const projects = [
-    {
-        id: 1,
-        title: "Droplet",
-        description: "Droplet is a ambicious social media app project that's still on development, it embraces the freedeom of speech and the possibility to connect with people and make new experiences.",
-        image: "/placeholder.svg?height=300&width=300",
-        tags: ["Next.JS", "Typescript", "Laravel"],
-    },
-    {
-        id: 2,
-        title: "Intercurso UNIFAE",
-        description: "This platform was created for my college in 2024. It was made to help organize the annual intercollegiate sports event (similar to a 'school games week'), where students from different courses compete and interact.",
-        image: "/placeholder.svg?height=300&width=300",
-        tags: ["React", "Javascript", "Laravel"],
-    },
-    {
-        id: 3,
-        title: "Stich",
-        description: "Stich is a free and opensource powerful CLI tool made for help people kickstart react and nextjs projects, make components and nextjs related files (pages, layouts, actions, api routes, etc...)",
-        image: "/placeholder.svg?height=300&width=300",
-        tags: ["Typescript", "Bun"],
-    },
-    // {
-    //     id: 4,
-    //     title: "Ecommerce Management System",
-    //     description: "A comprehensive platform for managing ecommerce operations, inventory, and customer relations with ease.",
-    //     image: "/placeholder.svg?height=300&width=300",
-    //     tags: ["Laravel", "PHP", "MySQL", "Livewire", "Docker"],
-    // },
-    // {
-    //     id: 5,
-    //     title: "VIP English School Platform",
-    //     description: "A streamlined learning management system offering interactive features for both teachers and students, facilitating assignments, progress tracking, and communication.",
-    //     image: "/placeholder.svg?height=300&width=300",
-    //     tags: ["NextJS", "Typescript", "PrismaORM", "PostgreSQL"],
-    // },
-    // {
-    //     id: 6,
-    //     title: "Pokédex WebApp",
-    //     description: "A simple Pokédex webapp",
-    //     image: "/placeholder.svg?height=300&width=300",
-    //     tags: ["NextJS", "Typescript", "PrismaORM", "PostgreSQL"],
-    // },
-];
+import { projects } from "../lib/projects-data";
 
 export default function Projects() {
 
@@ -55,11 +11,11 @@ export default function Projects() {
             <h2 className="text-center text-3xl font-black">Projects</h2>
 
             <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {projects.map((project, index: number) => (
+                {projects.slice(0, 3).map((project, index: number) => (
                     <ProjectCard key={index} project={project} />
                 ))}
                 <div className="w-full grid place-items-center col-span-3 mt-20">
-                    <Link to={"/projects"} className={buttonVariants({variant: "defaultGlass"})}>See more</Link>
+                    <Link to={"/projects"} className={buttonVariants({ variant: "defaultGlass" })}>See more</Link>
                 </div>
             </div>
 
