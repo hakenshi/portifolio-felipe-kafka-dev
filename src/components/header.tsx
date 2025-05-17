@@ -34,7 +34,7 @@ export default function Header() {
                             transition={{ duration: 0.6, delay: 0.1 }}
                             className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer'>
                             <Link to={{
-                                hash: "hero",
+                                hash: "#hero",
                                 pathname: "/"
                             }}>Home</Link>
                         </motion.li>
@@ -45,7 +45,7 @@ export default function Header() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer'>
                             <Link to={{
-                                hash: "projects",
+                                hash: "#projects",
                                 pathname: "/projects"
                             }}>Projects</Link>
                         </motion.li>
@@ -57,7 +57,7 @@ export default function Header() {
                             className='transition-all duration-300 hover:scale-105 transform cursor-pointer'>
                             <Link
                                 to={{
-                                    hash: "contact",
+                                    hash: "#contact",
                                     pathname: "/"
                                 }}
                                 className={buttonVariants({ variant: 'default' })}

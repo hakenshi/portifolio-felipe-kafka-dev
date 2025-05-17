@@ -2,8 +2,9 @@ import { Code2Icon } from 'lucide-react'
 import { Link } from 'react-router'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import { buttonVariants } from './ui/button'
+import React from 'react'
 
-interface ProjectCardProps {
+interface ProjectCardProps extends React.Component {
     id: number
     title: string,
     briefDescription: string
