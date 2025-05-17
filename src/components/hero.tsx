@@ -9,20 +9,23 @@ export default function Hero() {
             <div className="flex items-center justify-evenly w-full">
                 <div className='max-w-xl'>
                     <div className="flex flex-col items-center">
-                        <h1 className="text-5xl font-extrabold gray-gradient">
-                            <span>Felipe Kafka Dias</span>
+                        <h1 className="text-5xl font-extrabold gray-gradient drop-shadow-[0px_0px_20px_#ffffff6a]">
+                            <span className=''>Felipe Kafka Dias</span>
                         </h1>
                         <p className="text-xl tracking-tight bg-radial from-slate-200 to-zinc-400 p-5 text-transparent bg-clip-text">Shall we
                             <span className='bg-linear-to-t from-red-300 via-red-500 to-red-700 text-transparent bg-clip-text font-medium red-shadow'> build </span>
                             something together?</p>
                     </div>
-                    <div className='space-x-10 text-center mt-15'>
+                    <div className='space-x-10 text-center pt-2'>
                         <Button size='lg' variant='defaultGlass' className='text-lg text-center w-56'>
                             Download My CV
                         </Button>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <Button size='lg' variant={'default'} className='text-lg text-center w-56 border border-red-600 hover:bg-slate-950/50 bg-slate-950/10 drop-shadow-red-500'>
+                                <Button
+                                    size="lg"
+                                    variant="ghostGlass"
+                                >
                                     About Me
                                 </Button>
                             </DialogTrigger>
