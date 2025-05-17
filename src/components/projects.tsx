@@ -1,29 +1,29 @@
-import { Code2Icon } from "lucide-react";
+import { Link } from "react-router";
+import ProjectCard from "./project-card";
 import Section from "./section";
-import { Button } from "./ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { buttonVariants } from "./ui/button";
 
 const projects = [
     {
         id: 1,
         title: "Droplet",
-        description: "A dynamic social media platform inspired by Twitter, enabling real-time sharing and interaction.",
+        description: "Droplet is a ambicious social media app project that's still on development, it embraces the freedeom of speech and the possibility to connect with people and make new experiences.",
         image: "/placeholder.svg?height=300&width=300",
-        tags: ["Next.JS","Laravel"],
+        tags: ["Next.JS", "Typescript", "Laravel"],
     },
     {
         id: 2,
         title: "Intercurso UNIFAE",
-        description: "A robust web app designed to streamline academic and extracurricular organization for UNIFAE with efficient communication and scheduling.",
+        description: "This platform was created for my college in 2024. It was made to help organize the annual intercollegiate sports event (similar to a 'school games week'), where students from different courses compete and interact.",
         image: "/placeholder.svg?height=300&width=300",
-        tags: ["React", "Javascript", "MariaDB", "Laravel"],
+        tags: ["React", "Javascript", "Laravel"],
     },
     {
         id: 3,
-        title: "Sistema de Pontos UNIFAE",
-        description: "A tailored digital attendance and point tracking system for UNIFAE, enhancing efficiency and accountability.",
+        title: "Stich",
+        description: "Stich is a free and opensource powerful CLI tool made for help people kickstart react and nextjs projects, make components and nextjs related files (pages, layouts, actions, api routes, etc...)",
         image: "/placeholder.svg?height=300&width=300",
-        tags: ["Laravel", "PHP", "MySQL", "Livewire", "Docker"],
+        tags: ["Typescript", "Bun"],
     },
     // {
     //     id: 4,
@@ -54,30 +54,12 @@ export default function Projects() {
         <Section id="projects">
             <h2 className="text-center text-3xl font-black">Projects</h2>
 
-            <div className="grid place-items-center grid-cols-3 gap-5">
+            <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {projects.map((project, index: number) => (
-                <Card className="dark hover:border-red-600/50 w-100 h-120 grid grid-rows-3 p-0" key={index}>
-                    <CardHeader className="bg-linear-to-br grid place-items-center from-gray-900/50 to-gray-950/50 inset-0 rounded-t-xl rounded-b-sm">
-                        <Code2Icon className="text-red-600/70" size={32} />
-                    </CardHeader>
-                    <CardContent className="">
-                        <CardTitle className="text-md text-white">{project.title}</CardTitle>
-                        <CardDescription className="pt-5">
-                            {project.description}
-                        </CardDescription>
-                    </CardContent>
-                    <CardFooter className="flex flex-col">
-                        <div className="flex gap-2">
-                            {project.tags.map(tag => (
-                                <div className="bg-zinc-600 px-3 py-1 rounded-full text-xs">{tag}</div>
-                            ))}
-                        </div>
-                        <div className="flex items-end h-20"><Button variant={"ghostGlass"} className="w-full">See Project</Button></div>
-                    </CardFooter>
-                </Card>
+                    <ProjectCard key={index} project={project} />
                 ))}
-                <div className="w-full grid place-items-center col-end-3 h-72">
-                    <Button variant={"defaultGlass"} className="w-56">See more</Button>
+                <div className="w-full grid place-items-center col-span-3 mt-20">
+                    <Link to={"/projects"} className={buttonVariants({variant: "defaultGlass"})}>See more</Link>
                 </div>
             </div>
 

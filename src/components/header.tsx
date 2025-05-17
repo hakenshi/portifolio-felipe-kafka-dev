@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { Button } from './ui/button';
+import { Link } from 'react-router';
 
 export default function Header() {
     return (
@@ -13,17 +14,17 @@ export default function Header() {
                         </p>
                     </div>
                     <ul className='flex items-center gap-5'>
-                        {['Home', 'About me', 'Projects'].map((item, index) => (
+                        {[{name: 'Home', route: "/"}, {name: 'Projects', route: "/projects"}].map(({name, route}, index) => (
                             <motion.li
                                 onClick={() => {
-                                    const selector = `#${item.toLowerCase().split(' ')[0]}`
+                                    const selector = `#${name.toLowerCase().split(' ')[0]}`
                                     const nextSection = document.querySelector(selector);
                                     if (nextSection) {
                                         nextSection.scrollIntoView({ behavior: 'smooth' });
                                     }
                                 }}
                                 className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer' key={index}>
-                                {item}
+                                <Link to={route}>{name}</Link>
                             </motion.li>
                         ))}
                         <motion.li

@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground hover:bg-primary/90",
+          "bg-red-500 transition-all duration-100 ease-in hover:bg-red-600/90",
         defaultGlass: "bg-red-500 transition-all duration-100 ease-in hover:bg-red-600/90 font-semibold red-shadow",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
@@ -19,7 +19,7 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        ghostGlass: "hover:bg-red-600/10 border border-red-600 text-lg text-center w-56 bg-transparent shadow-[0_0_15px_theme(colors.red.500)]",
+        ghostGlass: "hover:bg-red-600/10 border border-red-600 bg-transparent shadow-[0_0_15px_theme(colors.red.500)]",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
