@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 export function Blobs() {
   const commonChance = Math.random() < 0.5;

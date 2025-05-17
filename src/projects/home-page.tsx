@@ -1,9 +1,9 @@
 import { BriefcaseBusinessIcon, SearchIcon } from "lucide-react";
-import Section from "../components/section";
-import { projects, technologies } from "../lib/projects-data";
-import { Button } from "../components/ui/button";
 import { useState } from "react";
 import ProjectCard from "../components/project-card";
+import Section from "../components/section";
+import { Button } from "../components/ui/button";
+import { projects, technologies } from "../lib/projects-data";
 
 export default function ProjectsHomePage() {
 
