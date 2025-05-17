@@ -1,6 +1,6 @@
-import { motion } from 'motion/react'
-import { Button } from './ui/button';
+import { motion } from 'motion/react';
 import { Link, useLocation } from 'react-router';
+import { Button } from './ui/button';
 
 export default function Header() {
 
@@ -22,7 +22,7 @@ export default function Header() {
                                 onClick={() => {
                                     const selector = `#${name.toLowerCase().split(' ')[0]}`
                                     const nextSection = document.querySelector(selector);
-                                    if (nextSection && pathname !== "/") {
+                                    if (nextSection && pathname === "/") {
                                         nextSection.scrollIntoView({ behavior: 'smooth' });
                                     }
                                 }}
