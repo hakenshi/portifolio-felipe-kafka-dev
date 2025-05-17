@@ -46,8 +46,8 @@ export default function ProjectsHomePage() {
           />
         </div>
         <div className="flex flex-col gap-3 p-5">
-          <div className="flex justify-between mx-10">
-            <div className="space-x-3">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mx-0 sm:mx-10">
+            <div className="flex flex-wrap gap-2 sm:gap-3">
               {technologies.map((t, i) => (
                 <Button
                   onClick={() => setSelectedTech(t)}
@@ -58,11 +58,11 @@ export default function ProjectsHomePage() {
                 </Button>
               ))}
             </div>
-            <Button onClick={resetState} className="bg-red-600 px-3 py-1 rounded-full text-xs w-fit">Limpar</Button>
+            <Button onClick={resetState} className="bg-red-600 px-3 py-1 rounded-full text-xs w-fit mt-2 sm:mt-0">Limpar</Button>
           </div>
-          <div className="grid grid-cols-4 gap-5 mt-5">
-            {filteredProjects.map((project, index: number) => (
-              <ProjectCard key={index} project={project} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5 w-full">
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </div>

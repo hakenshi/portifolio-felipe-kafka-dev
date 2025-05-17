@@ -6,18 +6,18 @@ import { Dialog, DialogTrigger, DialogContent, DialogDescription, DialogTitle, D
 export default function Hero() {
     return (
         <Section id='hero'>
-            <div className="flex items-center justify-evenly w-full">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-evenly w-full">
                 <div className='max-w-xl'>
                     <div className="flex flex-col items-center">
-                        <h1 className="text-5xl font-extrabold gray-gradient drop-shadow-[0px_0px_20px_#ffffff6a]">
+                        <h1 className="text-3xl md:text-5xl font-extrabold gray-gradient drop-shadow-[0px_0px_20px_#ffffff6a]">
                             <span className=''>Felipe Kafka Dias</span>
                         </h1>
                         <p className="text-xl tracking-tight bg-radial from-slate-200 to-zinc-400 p-5 text-transparent bg-clip-text">Let's
                             <span className='bg-linear-to-t from-red-300 via-red-500 to-red-700 text-transparent bg-clip-text font-medium drop-shadow-[2px_0px_10px_#fb2c36]'> build </span>
                             something together?</p>
                     </div>
-                    <div className='space-x-10 text-center pt-2'>
-                        <Button size='lg' variant='defaultGlass' className='text-lg text-center w-56'>
+                    <div className='space-y-10 md:space-x-10 text-center pt-2'>
+                        <Button size='lg' variant='defaultGlass' className='text-lg text-center w-full md:w-56'>
                             Download My CV
                         </Button>
                         <Dialog>
@@ -25,7 +25,7 @@ export default function Hero() {
                                 <Button
                                     size="lg"
                                     variant="ghostGlass"
-                                    className='text-lg text-center w-56'
+                                    className='text-lg text-center w-full md:w-56'
                                 >
                                     About Me
                                 </Button>
@@ -52,7 +52,7 @@ export default function Hero() {
                         </Dialog>
                     </div>
                 </div>
-                <div className='flex flex-col items-center'>
+                <div className='flex md:flex-col md:items-center'>
                     <div className='size-48 md:size-96'>
                         <motion.div
                             initial={{
