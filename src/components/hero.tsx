@@ -5,7 +5,7 @@ import { Dialog, DialogTrigger, DialogContent, DialogDescription, DialogTitle, D
 
 export default function Hero() {
     return (
-        <Section id='home'>
+        <Section id='hero'>
             <div className="flex items-center justify-evenly w-full">
                 <div className='max-w-xl'>
                     <div className="flex flex-col items-center">

@@ -1,8 +1,10 @@
 import { Code2Icon } from 'lucide-react'
-import { Button } from './ui/button'
+import { Link } from 'react-router'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
+import { buttonVariants } from './ui/button'
 
 interface ProjectCardProps {
+    id: number
     title: string,
     description: string
     tags: string[]
@@ -22,11 +24,11 @@ export default function ProjectCard({ project }: { project: ProjectCardProps }) 
             </CardContent>
             <CardFooter className="flex flex-col">
                 <div className="flex justify-start w-full gap-2">
-                    {project.tags.slice(0,3).map(tag => (
+                    {project.tags.slice(0, 3).map(tag => (
                         <div className="bg-gray-600 px-3 py-1 rounded-full text-xs">{tag}</div>
                     ))}
                 </div>
-                <div className="flex items-end h-2/3"><Button variant={"default"} className="w-full">See Project</Button></div>
+                <div className="flex items-end h-2/3"><Link className={buttonVariants({ variant: 'default' })} to={`/projects/${project.id}`} >See Project</Link></div>
             </CardFooter>
         </Card>
     )
