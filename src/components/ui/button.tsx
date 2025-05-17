@@ -9,8 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-red-500 transition-all duration-100 ease-in hover:bg-red-600/90",
+        default: "bg-red-500 transition-all duration-100 ease-in hover:bg-red-600/90",
         defaultGlass: "bg-red-500 transition-all duration-100 ease-in hover:bg-red-600/90 font-semibold red-shadow",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
@@ -20,7 +19,6 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         ghostGlass: "hover:bg-red-600/10 border border-red-600 bg-transparent shadow-[0_0_15px_theme(colors.red.500)]",
-        link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

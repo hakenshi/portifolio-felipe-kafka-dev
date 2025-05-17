@@ -6,7 +6,7 @@ import { buttonVariants } from './ui/button'
 interface ProjectCardProps {
     id: number
     title: string,
-    description: string
+    briefDescription: string
     tags: string[]
 }
 
@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: { project: ProjectCardProps }) 
             <CardContent className="flex flex-col justify-center">
                 <CardTitle className="text-md text-white">{project.title}</CardTitle>
                 <CardDescription className="pt-5">
-                    {project.description}
+                    {project.briefDescription}
                 </CardDescription>
             </CardContent>
             <CardFooter className="flex flex-col">

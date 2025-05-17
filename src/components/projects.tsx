@@ -15,7 +15,10 @@ export default function Projects() {
                     <ProjectCard key={index} project={project} />
                 ))}
                 <div className="w-full grid place-items-center col-span-3 mt-20">
-                    <Link to={"/projects"} className={buttonVariants({ variant: "defaultGlass" })}>See more</Link>
+                    <Link to={{
+                        hash: "projects",
+                        pathname: "/projects"
+                    }} className={buttonVariants({ variant: "defaultGlass" })}>See more</Link>
                 </div>
             </div>
 

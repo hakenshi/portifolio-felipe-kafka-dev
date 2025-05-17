@@ -22,7 +22,7 @@ export default function MainLayout() {
             <div className="relative">
                 <div className="fixed inset-0 z-[-1]">
                     <div
-                        className="absolute inset-0 bg-linear-to-t from-red-900/15 via-red-950/15 to-zinc-950 blur-2xl z-[-1]"
+                        className="absolute inset-0 bg-linear-to-t from-zinc-800/30 via-red-500/10 to-zinc-950/30 blur-2xl z-[-1]"
                     ></div>
                 </div>
                 <Header />

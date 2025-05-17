@@ -124,32 +124,40 @@
   }
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-section{
+section {
   max-height: 100vh;
   height: 100vh;
 }
 
-main{
+main {
   height: 100%;
 }
 
-.grid-container{
+.grid-container {
   display: grid;
 }
 
-.project-card-container{
+.project-card-container {
   width: 400px;
   height: 300px;
 }
 
-h1,h2,h3,h4,h5,h6{
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.gray-gradient {
   @apply bg-gradient-to-t from-zinc-500 via-zinc-200 to-white text-transparent bg-clip-text;
 }
 
-.red-shadow{
+.red-shadow {
   @apply drop-shadow-[0px_0_10px_var(--color-red-500)];
 }

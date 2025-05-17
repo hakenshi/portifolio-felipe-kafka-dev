@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { buttonVariants } from './ui/button';
 
 const liVariants = {
-    hidden: { opacity: 0, y: -10 },
+    hidden: { opacity: 0, y: 0 },
     visible: { opacity: 1, y: 0 }
 };
 
@@ -12,7 +12,12 @@ export default function Header() {
         <header className='fixed top-4 left-5 px-5 py-3 mx-auto w-[98vw] font-black border rounded-full border-zinc-900/50 bg-zinc-950/50 backdrop-blur-lg z-20'>
             <nav>
                 <div className='flex justify-between mx-10'>
-                    <div>
+                    <motion.div
+                        variants={liVariants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 0.6, delay: 0 }}
+                    >
                         <Link to={{
                             hash: "#hero",
                             pathname: "/"
@@ -20,13 +25,13 @@ export default function Header() {
                             <img src="/makima.png" alt="" className='size-12 opacity-90' />
                             <span>Felipe Kafka Dias</span>
                         </Link>
-                    </div>
+                    </motion.div>
                     <ul className='flex items-center gap-5'>
                         <motion.li
                             variants={liVariants}
                             initial="hidden"
                             animate="visible"
-                            transition={{ duration: 0.4, delay: 0.1 }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
                             className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer'>
                             <Link to={{
                                 hash: "hero",
@@ -37,7 +42,7 @@ export default function Header() {
                             variants={liVariants}
                             initial="hidden"
                             animate="visible"
-                            transition={{ duration: 0.4, delay: 0.2 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
                             className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer'>
                             <Link to={{
                                 hash: "projects",
@@ -48,8 +53,8 @@ export default function Header() {
                             variants={liVariants}
                             initial="hidden"
                             animate="visible"
-                            transition={{ duration: 0.4, delay: 0.3 }}
-                            className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer'>
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                            className='transition-all duration-300 hover:scale-105 transform cursor-pointer'>
                             <Link
                                 to={{
                                     hash: "contact",
