@@ -1,7 +1,8 @@
 import Section from './section'
-import { Button } from './ui/button'
+import { Button, buttonVariants } from './ui/button'
 import { easeIn, motion } from "motion/react"
 import { Dialog, DialogTrigger, DialogContent, DialogDescription, DialogTitle, DialogHeader } from './ui/dialog'
+import { Link } from 'react-router'
 
 export default function Hero() {
     return (
@@ -17,9 +18,9 @@ export default function Hero() {
                             something together?</p>
                     </div>
                     <div className='space-y-10 md:space-x-10 text-center pt-2'>
-                        <Button size='lg' variant='defaultGlass' className='text-lg text-center w-full md:w-56'>
+                        <a target='_blank' href={"https://drive.google.com/file/d/15tbDK6XaDY2OgAIdLF4LhsyylDCgydnD/view?usp=sharing"} className={`${buttonVariants({variant: "defaultGlass", size: "lg"})} text-lg text-center w-full md:w-56`}>
                             Download My CV
-                        </Button>
+                        </a>
                         <Dialog>
                             <DialogTrigger asChild>
                                 <Button
