@@ -1,8 +1,7 @@
+import { easeIn, motion } from "motion/react"
 import Section from './section'
 import { Button, buttonVariants } from './ui/button'
-import { easeIn, motion } from "motion/react"
-import { Dialog, DialogTrigger, DialogContent, DialogDescription, DialogTitle, DialogHeader } from './ui/dialog'
-import { Link } from 'react-router'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog'
 
 export default function Hero() {
     return (
