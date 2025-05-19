@@ -53,7 +53,7 @@ export const projects = [
         image: "/placeholder.svg?height=300&width=300",
         tags: ["Typescript", "Bun"],
         timeline: {
-            start: "November 2023",
+            start: "May 2025",
             end: null, // still in development
             status: "In Development",
         },

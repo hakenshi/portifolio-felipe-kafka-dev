@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: { project: ProjectCardProps }) {
     return (
-        <Card className="dark hover:border-red-600/50 w-full max-w-xs sm:max-w-sm md:w-80 md:h-110 lg:w-100 lg:h-130 grid grid-rows-4 p-0">
+        <Card className="dark hover:border-red-600/50 w-60 md:w-80 md:h-110 lg:w-100 lg:h-130 grid grid-rows-4 p-0">
             <CardHeader className="bg-linear-to-br grid row-span-2 place-items-center from-gray-900/50 to-gray-950/50 rounded-t-xl rounded-b-sm">
                 <Code2Icon className="text-red-600/70" size={32} />
             </CardHeader>

@@ -13,7 +13,7 @@ export default function Projects() {
                 {projects.slice(0, 3).map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
-                <div className="w-full grid place-items-center col-span-3 mt-20">
+                <div className="w-full grid place-items-center col-span-3 mt-10 md:mt-20">
                     <Link to={{
                         hash: "#projects",
                         pathname: "/projects"
