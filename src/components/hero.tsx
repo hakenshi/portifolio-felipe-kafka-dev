@@ -1,7 +1,8 @@
+import { ArrowDownIcon, DownloadIcon } from "lucide-react"
 import { easeIn, motion } from "motion/react"
+import { Link } from "react-router"
 import Section from './section'
 import { Button, buttonVariants } from './ui/button'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog'
 
 export default function Hero() {
     return (
@@ -17,39 +18,22 @@ export default function Hero() {
                             something together?</p>
                     </div>
                     <div className='space-y-10 md:space-x-10 text-center pt-2'>
-                        <a target='_blank' href={"https://drive.google.com/file/d/15tbDK6XaDY2OgAIdLF4LhsyylDCgydnD/view?usp=sharing"} className={`${buttonVariants({variant: "defaultGlass", size: "lg"})} text-lg text-center w-full md:w-56`}>
-                            Download My CV
+                        <a target='_blank' href={"https://drive.google.com/file/d/15tbDK6XaDY2OgAIdLF4LhsyylDCgydnD/view?usp=sharing"} className={`${buttonVariants({ variant: "defaultGlass", size: "lg" })} text-lg text-center w-full md:w-56`}>
+                            Download My CV <DownloadIcon />
                         </a>
-                        <Dialog>
-                            <DialogTrigger asChild>
-                                <Button
-                                    size="lg"
-                                    variant="ghostGlass"
-                                    className='text-lg text-center w-full md:w-56'
-                                >
-                                    About Me
-                                </Button>
-                            </DialogTrigger>
-                            <DialogContent className='dark border-red-600/10 shadow-2xl shadow-red-600/20 p-10'>
-                                <DialogHeader>
-                                    <DialogTitle>
-                                        <h2 className='text-4xl text-center font-black mb-5'>About Me</h2>
-                                    </DialogTitle>
-                                </DialogHeader>
-                                <DialogDescription>
-                                    <div className="space-y-3">
-                                        <p>
-                                            I’m Felipe Kafka Dias, a graduate in Information Technology from SENAC MG and currently pursuing a Bachelor's degree in Software Engineering at UNIFAE.
-                                        </p>
-                                        <p>I’m a dedicated professional with a critical mindset, always seeking to enhance my knowledge and skills in new technologies.</p>
-                                        <p>
-                                            I have experience in PHP, Laravel, React, and TailwindCSS, developing real systems and applying these technologies in challenging projects.
-                                        </p>
-                                        <p>I’m committed to delivering my projects efficiently, focusing on quality and continuous learning.</p>
-                                    </div>
-                                </DialogDescription>
-                            </DialogContent>
-                        </Dialog>
+                        <Button
+                            asChild
+                            size="lg"
+                            variant="ghostGlass"
+                            className='text-lg text-center w-full md:w-56'
+                        >
+                            <Link to={{
+                                hash: "#about",
+                                pathname: "/"
+                            }}>
+                                About Me <ArrowDownIcon size={32} />
+                            </Link>
+                        </Button>
                     </div>
                 </div>
                 <div className='flex md:flex-col md:items-center'>
@@ -69,6 +53,6 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-        </Section>
+        </Section >
     )
 }

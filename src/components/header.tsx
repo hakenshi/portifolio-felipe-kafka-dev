@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import { buttonVariants } from './ui/button';
 
 const liVariants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: 0, y: 0 },
     visible: { opacity: 1, y: 0 }
 };
 
@@ -23,8 +23,9 @@ export default function Header() {
 
     const navLinks = [
         { to: { hash: "#hero", pathname: "/" }, label: "Home", delay: 0.1 },
-        { to: { hash: "#projects", pathname: "/projects" }, label: "Projects", delay: 0.2 },
-        { to: { hash: "#contact", pathname: "/" }, label: "Contact", delay: 0.3, isButton: true }
+        { to: { hash: "#about", pathname: "/" }, label: "About me", delay: 0.2 },
+        { to: { hash: "#projects", pathname: "/projects" }, label: "Projects", delay: 0.3 },
+        { to: { hash: "#contact", pathname: "/" }, label: "Contact", delay: 0.4, isButton: true }
     ];
 
     return (

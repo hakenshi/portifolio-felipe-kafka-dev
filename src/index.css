@@ -127,7 +127,7 @@
 html {
   scroll-behavior: smooth;
 }
-
+/* 
 section {
   max-height: 100vh;
   height: 100vh;
@@ -139,12 +139,12 @@ main {
 
 .grid-container {
   display: grid;
-}
+} */
 
-.project-card-container {
+/* .project-card-container {
   width: 400px;
   height: 300px;
-}
+} */
 
 
 

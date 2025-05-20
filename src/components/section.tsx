@@ -6,7 +6,7 @@ interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export default function Section({ children, ...rest }: SectionProps) {
   return (
-    <section className='flex items-center justify-center flex-col gap-5 max-h-screen h-full' {...rest}>
+    <section className='grid place-items-center gap-5 min-h-screen py-8' {...rest}>
       {children}
     </section>
   )
