@@ -22,10 +22,10 @@ export default function Header() {
     };
 
     const navLinks = [
-        { to: { hash: "#hero", pathname: "/" }, label: "Home", delay: 0.1 },
-        { to: { hash: "#about", pathname: "/" }, label: "About me", delay: 0.2 },
-        { to: { hash: "#projects", pathname: "/projects" }, label: "Projects", delay: 0.3 },
-        { to: { hash: "#contact", pathname: "/" }, label: "Contact", delay: 0.4, isButton: true }
+        { to: "/", label: "Home", delay: 0.1 },
+        { to: "/#about", label: "About me", delay: 0.2 },
+        { to: "/projects", label: "Projects", delay: 0.3 },
+        { to: "/#contact", label: "Contact", delay: 0.4, isButton: true }
     ];
 
     return (
@@ -38,10 +38,7 @@ export default function Header() {
                         animate="visible"
                         transition={{ duration: 0.6, delay: 0 }}
                     >
-                        <Link to={{
-                            hash: "#hero",
-                            pathname: "/"
-                        }} className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer inline-flex items-center gap-2 sm:gap-3'>
+                        <Link to="/" className='transition-all duration-300 hover:scale-105 transform hover:text-red-500 cursor-pointer inline-flex items-center gap-2 sm:gap-3'>
                             <img src="/makima.png" alt="Logo" className='size-10 sm:size-12 opacity-90' />
                             <span className='text-sm sm:text-base'>Felipe Kafka Dias</span>
                         </Link>

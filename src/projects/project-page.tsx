@@ -20,10 +20,7 @@ export default function ProjectsProjectPage() {
       <Section>
         <div className="h-screen w-full flex flex-col justify-center items-center p-4 md:p-10 space-y-5 max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center">Project not found</h2>
-          <Link to={{
-            hash: "#projects",
-            pathname: "/projects"
-          }} className="flex items-center text-red-700 hover:text-red-500">
+          <Link to="/projects" className="flex items-center text-red-700 hover:text-red-500">
             <ChevronLeftIcon size={24} className="mr-1" />
             Back to all projects
           </Link>
@@ -35,10 +32,7 @@ export default function ProjectsProjectPage() {
   return (
     <Section>
       <div className="h-10/12 w-full p-4 md:p-6 lg:p-10 space-y-5 max-w-7xl mx-auto">
-        <Link to={{
-          hash: "#projects",
-          pathname: "/projects"
-        }} className="bg-transparent hidden md:flex justify-start items-center text-red-700 hover:text-red-500 sticky top-4 z-10 backdrop-blur-md p-2 rounded-md w-fit">
+        <Link to="/projects" className="bg-transparent hidden md:flex justify-start items-center text-red-700 hover:text-red-500 sticky top-4 z-10 backdrop-blur-md p-2 rounded-md w-fit">
           <ChevronLeftIcon size={20} />
           <span className="ml-1 text-sm md:text-base">Back to all projects</span>
         </Link>
@@ -108,7 +102,7 @@ export default function ProjectsProjectPage() {
             {previousProject && (
               <Card className="bg-gray-900/50 text-gray-200 border-gray-800/50 w-full sm:max-w-xs h-full hover:border-red-700/50 transition-colors">
                 <CardContent className="p-3 md:p-4 h-full flex items-center">
-                  <Link to={`/projects/${previousProject.id}#projects`} className="flex items-center gap-3 w-full">
+                  <Link to={`/projects/${previousProject.id}`} className="flex items-center gap-3 w-full">
                     <ChevronLeftIcon size={20} />
                     <div className="flex flex-col">
                       <span className="hidden md:inline text-xs md:text-sm text-zinc-400">Previous Project</span>
@@ -123,7 +117,7 @@ export default function ProjectsProjectPage() {
             {nextProject && (
               <Card className="bg-gray-900/50 text-gray-200 border-gray-800/50 w-full sm:max-w-xs h-full hover:border-red-700/50 transition-colors">
                 <CardContent className="p-3 md:p-4 h-full flex items-center justify-end">
-                  <Link to={`/projects/${nextProject.id}#projects`} className="flex items-center gap-3 w-full justify-end">
+                  <Link to={`/projects/${nextProject.id}`} className="flex items-center gap-3 w-full justify-end">
                     <div className="flex flex-col text-right">
                       <span className="hidden md:inline text-xs md:text-sm text-zinc-400">Next Project</span>
                       <span className="hidden md:inline text-base md:text-lg font-medium">{nextProject.title}</span>

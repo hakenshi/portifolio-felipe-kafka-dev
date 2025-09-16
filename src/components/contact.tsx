@@ -32,54 +32,69 @@ export default function Contact() {
     }
     return (
         <Section id="contact">
-            <div className="grid place-items-center">
-                <div className="flex flex-col items-center justify-around gap-5">
-                    <div className="grid place-items-center">
-                        <h2 className="text-2xl font-black pb-5">Social Media</h2>
-                        <div className="flex gap-5">
-                            <a target="_blank" href="https://github.com/hakenshi"><img className="size-15" src="/github.png" alt="" /></a>
-                            <a target="_blank" href="https://www.linkedin.com/in/felipe-kafka-dias-39390b252"><img className="size-15" src="/linkedin.png" alt="" /></a>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col items-center justify-center gap-8 max-w-4xl mx-auto">
+                    <div className="text-center">
+                        <h2 className="text-2xl sm:text-3xl font-black mb-6">Social Media</h2>
+                        <div className="flex gap-6 justify-center">
+                            <a target="_blank" href="https://github.com/hakenshi" className="hover:scale-110 transition-transform">
+                                <img className="w-12 h-12 sm:w-16 sm:h-16" src="/github.png" alt="GitHub" />
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/felipe-kafka-dias-39390b252" className="hover:scale-110 transition-transform">
+                                <img className="w-12 h-12 sm:w-16 sm:h-16" src="/linkedin.png" alt="LinkedIn" />
+                            </a>
                         </div>
                     </div>
-                    <form ref={formRef} onSubmit={form.handleSubmit(sendEmail)} className="bg-zinc-950/60  md:max-w-2xl md:w-1000 min-h-120 p-10 rounded-xl border-zinc-900 border-2 space-y-4">
-                        <h2 className="text-2xl font-black text-center">Get in Touch</h2>
-                        <p className="text-xl text-zinc-600 text-center">Have something on your mind? Let's get in touch</p>
-                        <div className="w-full">
-                            <label className="block pb-6">Name</label>
-                            <motion.input
-                                initial={{ boxShadow: "0 0 0 0px transparent" }}
-                                whileFocus={{ boxShadow: "0 0 0 2px var(--color-red-600)", transition: focusTransition }}
-                                className="w-full border-zinc-800 border-2 rounded px-4 py-2"
-                                type="text"
-                                {...form.register("to_name")}
-                            />
-                            {form.formState.errors && (<p>{form.formState.errors.to_name?.message}</p>)}
+                    <form ref={formRef} onSubmit={form.handleSubmit(sendEmail)} className="bg-zinc-950/60 w-full max-w-2xl p-6 sm:p-8 lg:p-10 rounded-xl border-zinc-900 border-2 space-y-6">
+                        <div className="text-center">
+                            <h2 className="text-xl sm:text-2xl font-black mb-2">Get in Touch</h2>
+                            <p className="text-lg sm:text-xl text-zinc-600">Have something on your mind? Let's get in touch</p>
                         </div>
-                        <div className="w-full">
-                            <label className="block pb-6">Email</label>
-                            <motion.input
-                                initial={{ boxShadow: "0 0 0 0px transparent" }}
-                                whileFocus={{ boxShadow: "0 0 0 2px var(--color-red-600)", transition: focusTransition }}
-                                className="w-full border-zinc-800 border-2 rounded px-4 py-2"
-                                type="text"
-                                {...form.register("from_name")}
-                            />
-                            {form.formState.errors && (<p>{form.formState.errors.from_name?.message}</p>)}
-
+                        <div className="space-y-6">
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Name</label>
+                                <motion.input
+                                    initial={{ boxShadow: "0 0 0 0px transparent" }}
+                                    whileFocus={{ boxShadow: "0 0 0 2px var(--color-red-600)", transition: focusTransition }}
+                                    className="w-full border-zinc-800 border-2 rounded px-4 py-3 bg-zinc-900/50 text-white placeholder-zinc-500 focus:outline-none"
+                                    type="text"
+                                    placeholder="Your name"
+                                    {...form.register("to_name")}
+                                />
+                                {form.formState.errors.to_name && (
+                                    <p className="text-red-400 text-sm mt-1">{form.formState.errors.to_name.message}</p>
+                                )}
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Email</label>
+                                <motion.input
+                                    initial={{ boxShadow: "0 0 0 0px transparent" }}
+                                    whileFocus={{ boxShadow: "0 0 0 2px var(--color-red-600)", transition: focusTransition }}
+                                    className="w-full border-zinc-800 border-2 rounded px-4 py-3 bg-zinc-900/50 text-white placeholder-zinc-500 focus:outline-none"
+                                    type="email"
+                                    placeholder="your.email@example.com"
+                                    {...form.register("from_name")}
+                                />
+                                {form.formState.errors.from_name && (
+                                    <p className="text-red-400 text-sm mt-1">{form.formState.errors.from_name.message}</p>
+                                )}
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Message</label>
+                                <motion.textarea
+                                    initial={{ boxShadow: "0 0 0 0px transparent" }}
+                                    whileFocus={{ boxShadow: "0 0 0 2px var(--color-red-600)", transition: focusTransition }}
+                                    className="w-full resize-none border-zinc-800 border-2 rounded px-4 py-3 h-32 bg-zinc-900/50 text-white placeholder-zinc-500 focus:outline-none"
+                                    placeholder="Tell me about your project or just say hello!"
+                                    {...form.register("message")}
+                                />
+                                {form.formState.errors.message && (
+                                    <p className="text-red-400 text-sm mt-1">{form.formState.errors.message.message}</p>
+                                )}
+                            </div>
                         </div>
-
-                        <div className="w-full">
-                            <label className="block pb-6">Message</label>
-                            <motion.textarea
-                                initial={{ boxShadow: "0 0 0 0px transparent" }}
-                                whileFocus={{ boxShadow: "0 0 0 2px var(--color-red-600)", transition: focusTransition }}
-                                className="w-full resize-none border-zinc-800 border-2 rounded px-4 py-2 h-32"
-                                {...form.register("message")}
-                            />
-                            {form.formState.errors && (<p>{form.formState.errors.message?.message}</p>)}
-                        </div>
-                        <div className="text-center p-5">
-                            <Button variant={"defaultGlass"}>
+                        <div className="text-center pt-4">
+                            <Button variant="defaultGlass" size="lg" className="w-full sm:w-auto min-w-[200px]">
                                 Send Message
                             </Button>
                         </div>

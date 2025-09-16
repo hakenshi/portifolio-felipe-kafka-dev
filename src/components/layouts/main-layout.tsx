@@ -10,10 +10,14 @@ export default function MainLayout() {
 
     useEffect(() => {
         if (location.hash) {
-            const element = document.getElementById(location.hash.replace('#', ''));
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+            setTimeout(() => {
+                const element = document.getElementById(location.hash.replace('#', ''));
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        } else {
+            window.scrollTo(0, 0);
         }
     }, [location]);
 

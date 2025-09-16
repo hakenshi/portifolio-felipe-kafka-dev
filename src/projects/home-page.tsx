@@ -27,15 +27,16 @@ export default function ProjectsHomePage() {
 
   return (
     <Section id="projects">
-      <div className="h-10/12 w-full p-10 space-y-5">
-        <div className="flex justify-start items-start gap-5">
-          <BriefcaseBusinessIcon size={48} className="text-red-500" />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-8">
+          <BriefcaseBusinessIcon size={48} className="text-red-500 flex-shrink-0" />
           <div>
-            <h2 className="text-2xl font-bold">Heres some other cool stuff i've done</h2>
-            <p className="text-xl text-zinc-400">Take a look around, see if you find something that interests you.</p>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">Here's some other cool stuff I've done</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-zinc-400">Take a look around, see if you find something that interests you.</p>
           </div>
         </div>
-        <div className="relative">
+        
+        <div className="relative mb-6">
           <SearchIcon className="absolute top-1/2 left-3 -translate-y-1/2 text-zinc-400" size={20} />
           <input
             type="text"
@@ -45,26 +46,43 @@ export default function ProjectsHomePage() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <div className="flex flex-col gap-3 p-5">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mx-0 sm:mx-10">
-            <div className="flex flex-wrap gap-2 sm:gap-3">
+        
+        <div className="mb-8">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 mb-6">
+            <div className="flex flex-wrap gap-2">
               {technologies.map((t, i) => (
                 <Button
                   onClick={() => setSelectedTech(t)}
                   key={i}
-                  className={`px-3 py-1 rounded-full text-xs w-fit ${selectedTech === t ? "bg-red-600" : "bg-gray-600"}`}
+                  size="sm"
+                  className={`px-3 py-1 rounded-full text-xs transition-colors ${
+                    selectedTech === t ? "bg-red-600 hover:bg-red-700" : "bg-gray-600 hover:bg-gray-500"
+                  }`}
                 >
                   {t}
                 </Button>
               ))}
             </div>
-            <Button onClick={resetState} className="bg-red-600 px-3 py-1 rounded-full text-xs w-fit mt-2 sm:mt-0">Limpar</Button>
+            <Button 
+              onClick={resetState} 
+              size="sm"
+              className="bg-red-600 hover:bg-red-700 px-4 py-1 rounded-full text-xs w-fit"
+            >
+              Clear Filters
+            </Button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5 w-full">
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
+          
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-zinc-400 text-lg">No projects found matching your criteria.</p>
+            </div>
+          )}
         </div>
       </div>
     </Section>
