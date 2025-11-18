@@ -70,82 +70,15 @@ section {
     height: auto;
     display: block;
     margin: 0 auto;
+    color: black;
 }
 
 .info-container {
     font-size: large;
 }
 
-.c1 {
-    color: #88c0d0;
-}
-
 .c5 {
     color: #81a1c1;
-}
-
-.col1 {
-    color: #bf616a;
-}
-
-.col2 {
-    color: #d08770;
-}
-
-.col3 {
-    color: #ebcb8b;
-}
-
-.col4 {
-    color: #a3be8c;
-}
-
-.col5 {
-    color: #88c0d0;
-}
-
-.col6 {
-    color: #5e81ac;
-}
-
-.col7 {
-    color: #b48ead;
-}
-
-.col8 {
-    color: #eceff4;
-}
-
-.col9 {
-    color: #3b4252;
-}
-
-.col10 {
-    color: #434c5e;
-}
-
-.col11 {
-    color: #4c566a;
-}
-
-.col12 {
-    color: #d8dee9;
-}
-
-.col13 {
-    color: #e5e9f0;
-}
-
-.col14 {
-    color: #eceff4;
-}
-
-.col15 {
-    color: #8fbcbb;
-}
-
-.col16 {
-    color: #88c0d0;
 }
 
 /* Responsividade */
