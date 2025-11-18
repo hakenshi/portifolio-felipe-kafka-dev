@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: url("/JetBrainsMonoNerdFontMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow: hidden;
+}
+
+body {
+    background-color: #262626;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.neofetch-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.prompt {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+.prompt>span {
+    color: yellowgreen;
+}
+
+.os-logo {
+    text-align: center;
+}
+
+.os-logo>img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.info-container {
+    font-size: large;
+}
+
+.c1 {
+    color: #88c0d0;
+}
+
+.c5 {
+    color: #81a1c1;
+}
+
+.col1 {
+    color: #bf616a;
+}
+
+.col2 {
+    color: #d08770;
+}
+
+.col3 {
+    color: #ebcb8b;
+}
+
+.col4 {
+    color: #a3be8c;
+}
+
+.col5 {
+    color: #88c0d0;
+}
+
+.col6 {
+    color: #5e81ac;
+}
+
+.col7 {
+    color: #b48ead;
+}
+
+.col8 {
+    color: #eceff4;
+}
+
+.col9 {
+    color: #3b4252;
+}
+
+.col10 {
+    color: #434c5e;
+}
+
+.col11 {
+    color: #4c566a;
+}
+
+.col12 {
+    color: #d8dee9;
+}
+
+.col13 {
+    color: #e5e9f0;
+}
+
+.col14 {
+    color: #eceff4;
+}
+
+.col15 {
+    color: #8fbcbb;
+}
+
+.col16 {
+    color: #88c0d0;
+}
+
+/* Responsividade */
+/* Responsividade */
+@media (max-width: 768px) {
+    .neofetch-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .os-logo>img {
+        max-width: 220px;
+    }
+    
+    .info-container pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .neofetch-container {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .prompt {
+        padding: 15px 0;
+    }
+
+    .os-logo>img {
+        max-width: 150px;
+    }
+
+    /* Reduce font size a bit on very small screens */
+    * {
+        font-size: clamp(12px, 1.8vw, 16px);
+    }
+}
+
+/* Improve wrapping for long values */
+.info-container,
+.prompt {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Small utility to keep layout from shifting when content is long */
+.neofetch-container>* {
+    min-width: 0;
+    /* allow flex/grid children to shrink properly */
+}

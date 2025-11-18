@@ -2,25 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portifolio | Felipe Kafka Dias</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <title>portifolio</title>
 </head>
 
-<body class="bg-gray-950">
-  <div class="text-zinc-100" id="root">
-  </div>
-  <script type="module" src="/src/main.tsx"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init({
-        publicKey: "cRcgIsXyCyMTzdq0m",
-      });
-    })();
-  </script>
+<body>
+    <main>
+        <section>
+            <div class="prompt">
+                <span>❯</span>
+                portifolio.sh
+            </div>
+            <div class="neofetch-container">
+                <div class="os-logo">
+                    <img src="/arch.svg" alt="">
+                </div>
+                <div class="info-container">
+                    <pre>
+<span class="c5"> My Info       </span>
+<span id="topBorder"></span>
+<span class="c5"> │</span>
+<span class="c5"> ├─  Name       </span> Felipe Kafka Dias
+<span class="c5"> ├─ 󰃖 Profession </span> Software Engineer
+<span class="c5"> ├─  Email      </span> <a href="mailto:fkdias025@gmail.com">Contact me here</a>
+<span class="c5"> ├─  Github     </span> <a href="https://github.com/hakenshi" target="_blank" rel="noopener noreferrer">hakenshi</a>
+<span class="c5"> ├─  Linkedin   </span> <a href="www.linkedin.com/in/felipe-kafka-dias-39390b252" target="_blank" rel="noopener noreferrer">felipe-kafka-dias</a>
+<span class="c5"> ├─ 󰃫 Age        </span> <span id="age"></span>
+<span class="c5"> ├─ 󰅐 Experience </span> <span id="experience"></span>
+<span class="c5"> ├─  Status     </span> Open to work / Freelancer / Student
+<span class="c5"> ├─  Languages  </span> Typescript, PHP
+<span class="c5"> ├─  Frameworks </span> Nextjs, Laravel, Tailwindcss
+<span class="c5"> │</span>
+<span id="bottomBorder"></span>
+</pre>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
